@@ -93,11 +93,14 @@ def time_stats(df):
     most_common_day = df['day_of_week'].mode()[0]
     print(f"Most Common Day: {most_common_day}")
 
-    # display the most common start hour
+    # Extract the hour from the 'Start Time' column to create the 'hour' column
     df['hour'] = df['Start Time'].dt.hour
-    most_common_start_hour = df['hour'].mode()[0]
-    print(f"Most Common Start Houer: {most_common_start_hour}")
 
+    # Display the most common start hour
+    most_common_start_hour = df['hour'].mode()[0]
+    print(f"Most Common Start Hour: {most_common_start_hour}")
+
+    # Display the time taken to perform the calculations
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('-'*40)
 
@@ -119,6 +122,7 @@ def station_stats(df):
     most_common_trip = df.groupby(['Start Station', 'End Station']).size().idxmax()
     print(f"Most Frequent Combination of Start Station and End Station Trip: {most_common_trip}")
 
+    # Display the time taken to perform the calculations
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('-'*40)
 
