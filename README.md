@@ -1,7 +1,8 @@
-# Bikeshare Data Analysis Project
-
 ## Date created
 July 23, 2024
+
+## Project Title
+Bikeshare Data Analysis Project
 
 ## Description
 This project analyzes bikeshare data from three major cities: Chicago, New York City, and Washington. The analysis includes statistics on the most frequent times of travel, the most popular stations and trips, trip durations, and user information.
